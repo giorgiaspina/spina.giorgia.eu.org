@@ -1,0 +1,222 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design - Skills</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .skill-card {
+      @apply flex flex-col items-center gap-2 rounded-lg border p-4 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105;
+    }
+    .skill-icon {
+      @apply text-3xl;
+      color: #000080;
+    }
+    .skill-name {
+      @apply text-sm font-semibold leading-tight;
+    }
+
+    .programming-languages {
+      @apply bg-transparent;
+    }
+
+    .databases {
+      @apply bg-transparent;
+    }
+
+    .data-processing {
+      @apply bg-transparent;
+    }
+
+    .tools {
+      @apply bg-transparent;
+    }
+
+    .soft-skills {
+      @apply bg-transparent;
+    }
+    .section-title {
+      @apply text-xl font-bold leading-tight tracking-tight px-6 pb-3 pt-6;
+    }
+
+    .programming-languages-title {
+      @apply text-yellow-700;
+    }
+
+    .databases-title {
+      @apply text-green-700;
+    }
+
+    .data-processing-title {
+      @apply text-blue-700;
+    }
+
+    .tools-title {
+      @apply text-purple-700;
+    }
+
+    .soft-skills-title {
+      @apply text-pink-700;
+    }
+    /* .header and .back-button classes can be removed if not used elsewhere, as header is now standardized HTML */
+  </style>
+<style>
+    body {
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+  </style>
+  <style>
+  body {
+    background-color: #e8f5e9; /* Light green */
+  }
+  </style>
+  <style>
+  /* Remove background color from footer */
+  footer {
+    background-color: transparent;
+  }
+  </style>
+  <style>
+  .btn-primary {
+    background-color: #388e3c; /* Professional dark green */
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #2e7d32; /* Slightly darker green */
+  }
+  </style>
+  </head>
+<body class="bg-slate-100" style="background-image: url('image/foto4.avif'); background-size: cover; background-position: center;">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+
+  <header class="shadow-md sticky top-0 z-50" style="color: black; background-color: transparent;">
+      <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity" href="index.html">Home</a>
+    <div class="flex space-x-4">
+      <a class="text-black text-sm font-medium hover:underline" href="about-me.html">About Me</a>
+      <a class="text-black text-sm font-medium hover:underline" href="skills.html">Skills</a>
+      <a class="text-black text-sm font-medium hover:underline" href="projects.html">Projects</a>
+      <a class="text-black text-sm font-medium hover:underline" href="contacts.html">Contact</a>
+      <a class="text-black text-sm font-medium hover:underline" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
+      <a class="text-black text-sm font-medium hover:underline" href="image/CV.pdf" target="_blank">Curriculum</a>
+    </div>
+  </nav>
+</header>
+
+<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10 shadow-sm">
+  <h1 class="text-slate-900 text-xl font-semibold leading-tight flex-1 text-center pr-10">Technical Skills</h1>
+  </div>
+
+<main class="flex-grow">
+<section>
+<h2 class="section-title programming-languages-title" style="color:#000080;">Programming Languages</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 programming-languages">
+<div class="skill-card">
+<span class="material-icons skill-icon">code</span>
+<h3 class="skill-name">Python</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">storage</span>
+<h3 class="skill-name">SQL</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">table_rows</span>
+<h3 class="skill-name">NoSQL</h3>
+</div>
+</div>
+
+<h2 class="section-title databases-title" style="color:#000080;">Databases</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 databases">
+<div class="skill-card">
+<span class="material-icons skill-icon">dns</span>
+<h3 class="skill-name">PhpMyAdmin</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">hub</span>
+<h3 class="skill-name">MongoDB</h3>
+</div>
+</div>
+
+<h2 class="section-title data-processing-title" style="color:#000080;">Data Processing</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 data-processing">
+<div class="skill-card">
+<span class="material-icons skill-icon">table_chart</span>
+<h3 class="skill-name">Processing CSV Files</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">transform</span>
+<h3 class="skill-name">Building ETL Pipelines</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">code</span>
+<h3 class="skill-name">Reading JSON Files</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">cleaning_services</span>
+<h3 class="skill-name">Data Cleaning</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">query_stats</span>
+<h3 class="skill-name">SQL & Query Writing</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">bar_chart</span>
+<h3 class="skill-name">Data Visualization</h3>
+</div>
+</div>
+
+<h2 class="section-title tools-title" style="color:#000080;">Tools</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 tools">
+<div class="skill-card">
+<span class="material-icons skill-icon">settings</span>
+<h3 class="skill-name">Xampp</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">grid_on</span>
+<h3 class="skill-name">Microsoft Excel</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">insights</span>
+<h3 class="skill-name">Microsoft Power BI</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon" style="display: flex; justify-content: center; align-items: center;">database</span>
+<h3 class="skill-name">MySQL</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">code</span>
+<h3 class="skill-name">VS Code</h3>
+</div>
+<div class="skill-card">
+<span class="material-icons skill-icon">code</span>
+<h3 class="skill-name">PyCharm</h3>
+</div>
+</div>
+
+<h2 class="section-title soft-skills-title" style="color:#000080;">Soft Skills</h2>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 soft-skills">
+<div class="skill-card">
+<span class="material-icons skill-icon">emoji_people</span>
+<h3 class="skill-name">Soft Skill</h3>
+</div>
+</div>
+</section>
+</main>
+<footer class="text-center py-4" style="">
+    <div class="flex flex-col items-center">
+      <p>Giorgia Spina</p>
+    </div>
+  </footer>
+</div>
+
+</body></html>
