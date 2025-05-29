@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B600%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>Giorgia Spina - Junior Data Engineer</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style>
+  <meta charset="utf-8"/>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B600%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B600%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+  <title>Giorgia Spina - Junior Data Engineer</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
     .btn-primary {
       background-color: transparent;
       color: #000080;
@@ -23,7 +24,7 @@
     }
     .btn-secondary {
       background-color: transparent;
-      color: #374151; /* Updated to dark grey */
+      color: #374151;
       font-weight: 600;
       padding: 0.75rem 1.5rem;
       border: 2px solid #a0a2a7;
@@ -32,7 +33,7 @@
       transition: color 0.3s ease, border-color 0.3s ease;
     }
     .btn-secondary:hover {
-      color: #1f2937; /* Darker grey on hover */
+      color: #1f2937;
       border-color: #1f2937;
     }
     .nav-link {
@@ -58,78 +59,91 @@
       background-size: cover;
       background-position: center;
     }
-</style>
+
+    #menu-links {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(-10px);
+      pointer-events: none;
+    }
+
+    #menu-links.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  </style>
 </head>
 <body class="bg-slate-100" style='font-family: Inter, "Noto Sans", sans-serif;'>
-<div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
-<!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
-<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
-  <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-    <!-- Logo / Home -->
-    <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity" href="index.html">Home</a>
+  <div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+    <header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
+      <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity" href="index.html">Home</a>
+        <div class="relative ml-auto mr-2 sm:mr-4">
+          <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 z-50" aria-label="Open menu">
+            <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
+            <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
+            <span class="block w-6 h-0.5 bg-black rounded transition-all"></span>
+          </button>
+        </div>
+      </nav>
+      <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[90%] sm:w-[60%] max-w-lg bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3">
+        <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
+        <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
+        <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
+        <a class="nav-link w-full text-left block" href="contacts.html">Contact</a>
+        <a class="nav-link w-full text-left block" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
+        <a class="nav-link w-full text-left block" href="image/CV.pdf" target="_blank">Curriculum</a>
+      </div>
+    </header>
 
-    <!-- Bottone hamburger (sempre visibile) -->
-    <div class="relative">
-      <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 z-50" aria-label="Open menu">
-        <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
-        <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
-        <span class="block w-6 h-0.5 bg-black rounded transition-all"></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- MENU A TENDINA MODERNO -->
-  <div id="menu-links" class="hidden absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[90%] sm:w-[60%] max-w-lg bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300">
-    <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
-    <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
-    <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
-    <a class="nav-link w-full text-left block" href="contacts.html">Contact</a>
-    <a class="nav-link w-full text-left block" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
-    <a class="nav-link w-full text-left block" href="image/CV.pdf" target="_blank">Curriculum</a>
-  </div>
-</header>
-<main class="flex-grow flex flex-col items-center justify-center p-6 text-center pt-16">
-<div class="w-full max-w-md">
-<div class="mb-8">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-32 h-32 mx-auto mb-4 shadow-lg border-4 border-white" style="background-image: url('image/foto_cv.jpg');"></div>
-<h1 class="text-slate-900 text-3xl font-bold leading-tight tracking-tight mb-1">Giorgia Spina</h1>
-<p class="text-[#000080] text-lg font-semibold leading-normal">Junior Data Engineer</p>
-<p class="text-slate-600 text-md font-medium leading-normal mt-1">Building Data-Driven Solutions</p>
-</div>
-<p class="text-slate-700 text-lg font-normal leading-relaxed mb-8 px-4">
+    <main class="flex-grow flex flex-col items-center justify-center p-6 text-center pt-16">
+      <div class="w-full max-w-md">
+        <div class="mb-8">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-32 h-32 mx-auto mb-4 shadow-lg border-4 border-white" style="background-image: url('image/foto_cv.jpg');"></div>
+          <h1 class="text-slate-900 text-3xl font-bold leading-tight tracking-tight mb-1">Giorgia Spina</h1>
+          <p class="text-[#000080] text-lg font-semibold leading-normal">Junior Data Engineer</p>
+          <p class="text-slate-600 text-md font-medium leading-normal mt-1">Building Data-Driven Solutions</p>
+        </div>
+        <p class="text-slate-700 text-lg font-normal leading-relaxed mb-8 px-4">
           I'm a data engineer passionate about transforming raw data into actionable insights. Explore my projects and let's connect!
         </p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button onclick="window.location.href='projects.html';" class="flex-1 btn-primary">
-<span class="truncate">View My Work</span>
-</button>
-<button onclick="window.location.href='contacts.html';" class="flex-1 btn-secondary">
-<span class="truncate">Get In Touch</span>
-</button>
-</div>
-</div>
-</main>
-<footer class="text-center py-4" style="background-color: transparent;">
-    <div class="flex flex-col items-center">
-      <p>Giorgia Spina</p>
-    </div>
-  </footer>
-</div>
-<!-- Add script for hamburger menu -->
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menuLinks = document.getElementById('menu-links');
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button onclick="window.location.href='projects.html';" class="flex-1 btn-primary">
+            <span class="truncate">View My Work</span>
+          </button>
+          <button onclick="window.location.href='contacts.html';" class="flex-1 btn-secondary">
+            <span class="truncate">Get In Touch</span>
+          </button>
+        </div>
+      </div>
+    </main>
 
-  menuBtn.addEventListener('click', () => {
-    menuLinks.classList.toggle('hidden');
-  });
+    <footer class="text-center py-4" style="background-color: transparent;">
+      <div class="flex flex-col items-center">
+        <p>Giorgia Spina</p>
+      </div>
+    </footer>
+  </div>
 
-  // Chiude il menu se si clicca fuori (opzionale)
-  document.addEventListener('click', (e) => {
-    if (!menuBtn.contains(e.target) && !menuLinks.contains(e.target)) {
-      menuLinks.classList.add('hidden');
-    }
-  });
-</script>
+  <!-- Hamburger script con animazione -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuLinks = document.getElementById('menu-links');
+
+    let isOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      menuLinks.classList.toggle('open', isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menuBtn.contains(e.target) && !menuLinks.contains(e.target)) {
+        isOpen = false;
+        menuLinks.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
