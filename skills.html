@@ -99,18 +99,26 @@
 <body class="bg-slate-100" style="background-image: url('image/foto4.avif'); background-size: cover; background-position: center;">
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
 
-  <header class="shadow-md sticky top-0 z-50" style="color: black; background-color: transparent;">
-      <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+  <!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
+<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
+  <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
     <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity" href="index.html">Home</a>
-    <div class="flex space-x-4">
-      <a class="text-black text-sm font-medium hover:underline" href="about-me.html">About Me</a>
-      <a class="text-black text-sm font-medium hover:underline" href="skills.html">Skills</a>
-      <a class="text-black text-sm font-medium hover:underline" href="projects.html">Projects</a>
-      <a class="text-black text-sm font-medium hover:underline" href="contacts.html">Contact</a>
-      <a class="text-black text-sm font-medium hover:underline" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
-      <a class="text-black text-sm font-medium hover:underline" href="image/CV.pdf" target="_blank">Curriculum</a>
+    <div class="relative">
+      <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 z-50" aria-label="Open menu">
+        <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-black rounded transition-all"></span>
+      </button>
     </div>
   </nav>
+  <div id="menu-links" class="hidden absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[90%] sm:w-[60%] max-w-lg bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300">
+    <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
+    <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
+    <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
+    <a class="nav-link w-full text-left block" href="contacts.html">Contact</a>
+    <a class="nav-link w-full text-left block" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
+    <a class="nav-link w-full text-left block" href="image/CV.pdf" target="_blank">Curriculum</a>
+  </div>
 </header>
 
 <div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10 shadow-sm">
@@ -219,4 +227,17 @@
   </footer>
 </div>
 
+<!-- Add script for hamburger menu -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menuLinks = document.getElementById('menu-links');
+  menuBtn.addEventListener('click', () => {
+    menuLinks.classList.toggle('hidden');
+  });
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !menuLinks.contains(e.target)) {
+      menuLinks.classList.add('hidden');
+    }
+  });
+</script>
 </body></html>
