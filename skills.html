@@ -11,7 +11,8 @@
       font-family: 'Inter', sans-serif;
     }
     .skill-card {
-      @apply flex flex-col items-center gap-2 rounded-lg border p-4 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:scale-105;
+      @apply flex flex-col items-center gap-2 rounded-lg border p-4 text-center shadow-2xl hover:shadow-[0_8px_32px_0_rgba(16,16,80,0.18)] transition-shadow duration-300 transform hover:scale-105;
+      /* shadow-2xl + custom hover shadow for more depth */
     }
     .skill-icon {
       @apply text-3xl;
@@ -63,7 +64,6 @@
     .soft-skills-title {
       @apply text-pink-700;
     }
-    /* .header and .back-button classes can be removed if not used elsewhere, as header is now standardized HTML */
   </style>
 <style>
     body {
@@ -71,7 +71,7 @@
       overflow-y: auto;
       background-color: #e8f5e9; /* Light green */
     }
-    /* Sfondo come index SOLO per PC */
+    /* Sfondo  per PC */
     @media (min-width: 640px) {
       body {
         background-image: url('image/foto4.avif');
@@ -113,112 +113,13 @@
   color: #1E293B;
 }
 
-/* HEADER più grande SOLO su smartphone */
-@media (max-width: 639px) {
-  header {
-    padding-top: 3.5rem !important;
-    padding-bottom: 3.5rem !important;
-  }
-  header nav {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-  }
-  header a.text-2xl {
-    font-size: 3.2rem !important;
-  }
-  #menu-btn {
-    width: 6.5rem !important;
-    height: 6.5rem !important;
-  }
-  #menu-btn span {
-    width: 3.8rem !important;
-    height: 1.2rem !important;
-  }
-  /* Migliora leggibilità su smartphone */
-  main {
-    font-size: 1.15rem !important;
-    line-height: 1.7 !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-  main h1, main h2, main h3 {
-    font-size: 1.5em !important;
-    line-height: 1.2 !important;
-    margin-top: 1.2em !important;
-    margin-bottom: 0.7em !important;
-    text-align: center !important;
-  }
-  main h1 {
-    font-size: 2.1em !important;
-  }
-  main h2 {
-    font-size: 1.4em !important;
-  }
-  main h3 {
-    font-size: 1.15em !important;
-  }
-  main .bg-white {
-    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
-    border-radius: 1.2rem !important;
-    padding: 0.7rem !important;
-  }
-  main .text-base, main .text-slate-600, main .text-slate-900, main .text-slate-800 {
-    font-size: 1.08rem !important;
-  }
-  main .rounded-xl {
-    border-radius: 1.2rem !important;
-  }
-  main .flex-col, main .flex {
-    gap: 0.7rem !important;
-  }
-  main .mb-4, main .mb-3, main .pb-6, main .py-4 {
-    margin-bottom: 0.7rem !important;
-    padding-bottom: 0.7rem !important;
-  }
-  main .px-0, main .px-2, main .px-4, main .p-3, main .sm\:p-5 {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
-  main .rounded-lg {
-    border-radius: 0.9rem !important;
-  }
-  main .inline-block {
-    font-size: 0.98rem !important;
-    padding: 0.3em 0.9em !important;
-  }
-  main .h-10 {
-    height: 2.8rem !important;
-  }
-  main .text-xs, main .text-sm {
-    font-size: 1rem !important;
-  }
-  main .font-semibold, main .font-bold {
-    font-weight: 600 !important;
-  }
-  main .shadow-lg, main .shadow-2xl {
-    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10) !important;
-  }
-  main .gap-2, main .gap-4, main .space-y-4, main .space-y-6 {
-    gap: 0.7rem !important;
-    row-gap: 0.7rem !important;
-  }
-  main .rounded {
-    border-radius: 0.7rem !important;
-  }
-  main .border-4 {
-    border-width: 2px !important;
-  }
-  main .sm\:w-\[550px\] {
-    width: 98vw !important;
-    max-width: 98vw !important;
-  }
-}
   </style>
   </head>
 <body class="bg-slate-50" style="font-family: Inter, 'Noto Sans', sans-serif;" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
-<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
-  <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
+<div class="min-h-screen flex flex-col">
+  <!-- HEADER -->
+  <header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
+    <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
 <a class="text-black text-2xl font-extrabold hover:opacity-80 transition-opacity sm:text-lg sm:font-bold ml-5" href="index.html">Home</a>
     <div class="relative ml-auto mr-2 sm:mr-2">
       <button id="menu-btn"
@@ -239,107 +140,128 @@
         <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
       </div>
 </header>
-<main class="flex-grow">
-  <h1 class="text-[#0d141c] text-3xl font-extrabold leading-tight tracking-tight text-center py-4">Skills</h1>
-  <section>
-<h2 class="section-title programming-languages-title" style="color:#000080;">Programming Languages</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 programming-languages">
-<div class="skill-card">
-<span class="material-icons skill-icon">code</span>
-<h3 class="skill-name">Python</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">storage</span>
-<h3 class="skill-name">SQL</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">table_rows</span>
-<h3 class="skill-name">NoSQL</h3>
-</div>
-</div>
+  <main class="flex-grow flex flex-col items-center justify-start pt-6 pb-8">
+    <section class="w-full max-w-5xl bg-white rounded-2xl shadow-lg px-8 py-8 mb-8 mt-4">
+          <h1 class="text-[#0d141c] text-4xl font-extrabold leading-tight tracking-tight text-center py-4 sm:text-3xl sm:font-bold">Skills</h1>
 
-<h2 class="section-title databases-title" style="color:#000080;">Databases</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 databases">
-<div class="skill-card">
-<span class="material-icons skill-icon">dns</span>
-<h3 class="skill-name">PhpMyAdmin</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">hub</span>
-<h3 class="skill-name">MongoDB</h3>
-</div>
-</div>
-
-<h2 class="section-title data-processing-title" style="color:#000080;">Data Processing</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 data-processing">
-<div class="skill-card">
-<span class="material-icons skill-icon">table_chart</span>
-<h3 class="skill-name">Processing CSV Files</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">transform</span>
-<h3 class="skill-name">Building ETL Pipelines</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">code</span>
-<h3 class="skill-name">Reading JSON Files</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">cleaning_services</span>
-<h3 class="skill-name">Data Cleaning</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">query_stats</span>
-<h3 class="skill-name">SQL & Query Writing</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">bar_chart</span>
-<h3 class="skill-name">Data Visualization</h3>
-</div>
-</div>
-
-<h2 class="section-title tools-title" style="color:#000080;">Tools</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 tools">
-<div class="skill-card">
-<span class="material-icons skill-icon">settings</span>
-<h3 class="skill-name">Xampp</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">grid_on</span>
-<h3 class="skill-name">Microsoft Excel</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">insights</span>
-<h3 class="skill-name">Microsoft Power BI</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon" style="display: flex; justify-content: center; align-items: center;">database</span>
-<h3 class="skill-name">MySQL</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">code</span>
-<h3 class="skill-name">VS Code</h3>
-</div>
-<div class="skill-card">
-<span class="material-icons skill-icon">code</span>
-<h3 class="skill-name">PyCharm</h3>
-</div>
-</div>
-
-<h2 class="section-title soft-skills-title" style="color:#000080;">Soft Skills</h2>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 soft-skills">
-<div class="skill-card">
-<span class="material-icons skill-icon">emoji_people</span>
-<h3 class="skill-name">Soft Skill</h3>
-</div>
-</div>
-</section>
-</main>
-<footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
-  <div class="flex flex-col items-center">
-    <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
-  </div>
-</footer>
+      <!-- Programming Languages -->
+      <div class="mb-8">
+        <h2 class="text-[#000080] text-2xl font-bold mb-4">Programming Languages</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">code</span>
+            <span class="font-medium text-slate-800">Python</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">storage</span>
+            <span class="font-medium text-slate-800">SQL</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">table_rows</span>
+            <span class="font-medium text-slate-800">NoSQL</span>
+          </div>
+        </div>
+      </div>
+      <!-- Databases -->
+      <div class="mb-8">
+        <h2 class="text-[#000080] text-2xl font-bold mb-4">Databases</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">database</span>
+            <span class="font-medium text-slate-800">MySQL</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">hub</span>
+            <span class="font-medium text-slate-800">MongoDB</span>
+          </div>
+        </div>
+      </div>
+      <!-- Data Processing -->
+      <div class="mb-8">
+        <h2 class="text-[#000080] text-2xl font-bold mb-4">Data Processing</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2">
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">table_chart</span>
+            <span class="font-medium text-slate-800">Processing CSV Files</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">transform</span>
+            <span class="font-medium text-slate-800">Building ETL Pipelines</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">code</span>
+            <span class="font-medium text-slate-800">Reading JSON Files</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">cleaning_services</span>
+            <span class="font-medium text-slate-800">Data Cleaning</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">query_stats</span>
+            <span class="font-medium text-slate-800">SQL & Query Writing</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">bar_chart</span>
+            <span class="font-medium text-slate-800">Data Visualization</span>
+          </div>
+        </div>
+      </div>
+      <!-- Tools -->
+      <div class="mb-8">
+        <h2 class="text-[#000080] text-2xl font-bold mb-4">Tools</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2">
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">settings</span>
+            <span class="font-medium text-slate-800">Xampp</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">grid_on</span>
+            <span class="font-medium text-slate-800">Microsoft Excel</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">insights</span>
+            <span class="font-medium text-slate-800">Microsoft Power BI</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">code</span>
+            <span class="font-medium text-slate-800">VS Code</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">code</span>
+            <span class="font-medium text-slate-800">PyCharm</span>
+          </div>
+        </div>
+      </div>
+      <!-- Soft Skills -->
+      <div>
+        <h2 class="text-[#000080] text-2xl font-bold mb-4">Soft Skills</h2>
+        <!-- Soft Skills Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mt-2">
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">groups</span>
+            <span class="font-medium text-slate-800">Teamwork</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">psychology</span>
+            <span class="font-medium text-slate-800">Problem Solving</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">autorenew</span>
+            <span class="font-medium text-slate-800">Adaptability</span>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4 flex items-center">
+            <span class="material-icons mr-3" style="color:#000080;">schedule</span>
+            <span class="font-medium text-slate-800">Time Management</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
+    <div class="flex flex-col items-center">
+      <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
+    </div>
+  </footer>
 </div>
 <style>
   html, body {

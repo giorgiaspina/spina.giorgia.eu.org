@@ -74,119 +74,14 @@
       background-color: #f1f5f9; /* fallback */
     }
   }
-
-  /* HEADER più grande SOLO su smartphone */
-  @media (max-width: 639px) {
-    header {
-      padding-top: 3.5rem !important;
-      padding-bottom: 3.5rem !important;
-    }
-    header nav {
-      padding-top: 4rem !important;
-      padding-bottom: 4rem !important;
-    }
-    header a.text-2xl {
-      font-size: 3.2rem !important;
-    }
-    #menu-btn {
-      width: 6.5rem !important;
-      height: 6.5rem !important;
-    }
-    #menu-btn span {
-      width: 3.8rem !important;
-      height: 1.2rem !important;
-    }
-    /* Migliora leggibilità su smartphone */
-    main {
-      font-size: 1.15rem !important;
-      line-height: 1.7 !important;
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-    }
-    main h1, main h2, main h3 {
-      font-size: 1.5em !important;
-      line-height: 1.2 !important;
-      margin-top: 1.2em !important;
-      margin-bottom: 0.7em !important;
-      text-align: center !important;
-    }
-    main h1 {
-      font-size: 2.1em !important;
-    }
-    main h2 {
-      font-size: 1.4em !important;
-    }
-    main h3 {
-      font-size: 1.15em !important;
-    }
-    main .bg-white {
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
-      border-radius: 1.2rem !important;
-      padding: 0.7rem !important;
-    }
-    main .text-base, main .text-slate-600, main .text-slate-900, main .text-slate-800 {
-      font-size: 1.08rem !important;
-    }
-    main .rounded-xl {
-      border-radius: 1.2rem !important;
-    }
-    main .flex-col, main .flex {
-      gap: 0.7rem !important;
-    }
-    main .mb-4, main .mb-3, main .pb-6, main .py-4 {
-      margin-bottom: 0.7rem !important;
-      padding-bottom: 0.7rem !important;
-    }
-    main .px-0, main .px-2, main .px-4, main .p-3, main .sm\:p-5 {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-    }
-    main .rounded-lg {
-      border-radius: 0.9rem !important;
-    }
-    main .inline-block {
-      font-size: 0.98rem !important;
-      padding: 0.3em 0.9em !important;
-    }
-    main .h-10 {
-      height: 2.8rem !important;
-    }
-    main .text-xs, main .text-sm {
-      font-size: 1rem !important;
-    }
-    main .font-semibold, main .font-bold {
-      font-weight: 600 !important;
-    }
-    main .shadow-lg, main .shadow-2xl {
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10) !important;
-    }
-    main .gap-2, main .gap-4, main .space-y-4, main .space-y-6 {
-      gap: 0.7rem !important;
-      row-gap: 0.7rem !important;
-    }
-    main .rounded {
-      border-radius: 0.7rem !important;
-    }
-    main .border-4 {
-      border-width: 2px !important;
-    }
-    main .sm\:w-\[550px\] {
-      width: 98vw !important;
-      max-width: 98vw !important;
-    }
-    /* Immagine profilo più grande */
-    main .h-32, main .w-32 {
-      width: 10rem !important;
-      height: 10rem !important;
-    }
-  }
+  /* RIMOSSE LE REGOLE RIPETITIVE PER SMARTPHONE */
 </style>
   </head>
 <body class="bg-slate-50" style="font-family: Inter, 'Noto Sans', sans-serif;" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
-<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-<!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
-<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
-  <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
+<div class="min-h-screen flex flex-col">
+  <!-- HEADER -->
+  <header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
+    <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
 <a class="text-black text-2xl font-extrabold hover:opacity-80 transition-opacity sm:text-lg sm:font-bold ml-5" href="index.html">Home</a>
     <div class="relative ml-auto mr-2 sm:mr-2">
       <button id="menu-btn"
@@ -207,25 +102,27 @@
         <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
       </div>
 </header>
-<main class="flex-grow">
-  <h1 class="text-[#0d141c] text-3xl font-extrabold leading-tight tracking-tight text-center py-4">Contact</h1>
-  <div class="p-2 @container">
-    <div class="flex w-full flex-col gap-4 items-center">
-      <div class="flex gap-2 flex-col items-center">
-        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 shadow-lg" style="background-image: url('image/foto_cv.jpg');"></div>
-        <div class="flex flex-col items-center justify-center gap-1">
-          <p class="text-color-text-primary text-2xl font-extrabold leading-tight tracking-tight text-center">Giorgia Spina</p>
-          <p class="text-primary text-lg font-bold leading-normal text-center">Junior Data Engineer</p>
-          <p class="text-color-text-secondary text-base font-normal leading-relaxed text-center max-w-md mt-2">
-            Having completed a Junior Data Engineer course, I am passionate about the data world and eager to explore its possibilities. My curiosity drives me to analyze and interpret data, uncovering valuable insights to solve real-world challenges and support impactful decisions.
+<main class="flex-grow flex flex-col items-center justify-start pt-6 pb-8">
+  <section class="w-full max-w-3xl bg-white rounded-2xl shadow-lg px-8 py-8 mb-8 mt-4">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <!-- Profile Info -->
+        <div class="flex-shrink-0 flex flex-col items-center md:items-start w-full md:w-1/3">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-44 h-44 shadow-lg border-4 border-white mb-4" style="background-image: url('image/foto_cv.jpg');"></div>
+          <h2 class="text-[#0d141c] text-2xl font-bold leading-tight mb-1">Giorgia Spina</h2>
+          <p class="text-[#000080] text-lg font-semibold mb-1">Junior Data Engineer</p>
+          <p class="text-slate-500 text-base font-medium flex items-center mb-2">
+            <span class="material-icons text-base mr-1">location_on</span>
+            Milan, MI
           </p>
         </div>
-      </div>
-    </div>
-  </div>
-  <h3 class="text-color-text-primary text-lg font-semibold leading-tight px-4 pb-3 pt-6">Contact Links</h3>
-  <div class="space-y-2 px-2 pb-6">
-    <a class="flex items-center gap-3 hover:bg-slate-100 p-3 rounded-lg min-h-14 justify-between group" href="https://www.linkedin.com/in/giorgia-spina">
+        <!-- Contact Content -->
+        <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left w-full">
+          <h1 class="text-[#0d141c] text-4xl font-extrabold leading-tight tracking-tight text-center py-4 sm:text-3xl sm:font-bold">Contact</h1>
+          <p class="text-slate-700 text-lg font-normal leading-relaxed mb-4">
+            Feel free to reach out for collaborations, questions, or just to say hello! I am always open to new opportunities and connections.
+          </p>
+         
+            <a class="flex items-center gap-3 hover:bg-slate-100 p-3 rounded-lg min-h-14 justify-between group" href="https://www.linkedin.com/in/giorgia-spina">
       <div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-10">
         <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
         <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
@@ -258,13 +155,16 @@
         <span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
       </div>
     </a>
-  </div>
-</main>
-<footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
-  <div class="flex flex-col items-center">
-    <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
-  </div>
-</footer>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
+    <div class="flex flex-col items-center">
+      <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
+    </div>
+  </footer>
 </div>
 <style>
   html, body {

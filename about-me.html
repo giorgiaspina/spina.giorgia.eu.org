@@ -1,11 +1,40 @@
-<html><head>
+<html>
+<head> 
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Inter%3Awght%40400%3B500%3B700%3B900&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-<title>💁🏻‍♀️ About Me</title>
+<title>👤 About me</title>
 <link rel="icon" type="image/png" href="image/foto_cv_tonda.png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+  @layer base {
+    :root {
+      --color-primary: #0c7ff2;
+      --color-secondary: #6b7280;
+      --color-accent: #f3f4f6;
+      --color-text-primary: #1f2937;
+      --color-text-secondary: #4b5563;
+      --color-background: #ffffff;
+    }
+    body {
+      font-family: 'Inter', "Noto Sans", sans-serif;
+      background-color: var(--color-background);
+    }
+  }
+  .icon-primary {
+    color: var(--color-primary);
+  }
+  .bg-primary-light {
+    background-color: var(--color-accent);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .border-primary-light {
+    border-color: var(--color-accent);
+  }
+</style>
 <style>
   body {
     min-height: 100vh;
@@ -46,413 +75,67 @@
       background-color: #f1f5f9; /* fallback */
     }
   }
-
-  /* HEADER più grande SOLO su smartphone */
-  @media (max-width: 639px) {
-    header {
-      padding-top: 5rem !important;
-      padding-bottom: 5rem !important;
-    }
-    header nav {
-      padding-top: 7rem !important;
-      padding-bottom: 7rem !important;
-    }
-    header a.text-2xl {
-      font-size: 5rem !important; /* 64px */
-      line-height: 1.1 !important;
-      letter-spacing: -0.04em !important;
-    }
-    #menu-btn {
-      width: 10rem !important;  /* 128px */
-      height: 10rem !important; /* 128px */
-    }
-    #menu-btn span {
-      width: 6rem !important; /* 72px */
-      height: 2.5rem !important; /* 24px */
-    }
-    /* Migliora leggibilità su smartphone */
-    main {
-      font-size: 1.15rem !important;
-      line-height: 1.7 !important;
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-    }
-    main h1, main h2, main h3 {
-      font-size: 2em !important;
-      line-height: 1.2 !important;
-      margin-top: 1.2em !important;
-      margin-bottom: 0.7em !important;
-      text-align: center !important;
-    }
-    main h1 {
-      font-size: 2.7em !important;
-    }
-    main h2 {
-      font-size: 2em !important;
-    }
-    main h3 {
-      font-size: 1.5em !important;
-    }
-    main .bg-white {
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
-      border-radius: 1.2rem !important;
-      padding: 0.7rem !important;
-    }
-    main .text-base, main .text-slate-600, main .text-slate-900, main .text-slate-800 {
-      font-size: 1.08rem !important;
-    }
-    main .rounded-xl {
-      border-radius: 1.2rem !important;
-    }
-    main .flex-col, main .flex {
-      gap: 0.7rem !important;
-    }
-    main .mb-4, main .mb-3, main .pb-6, main .py-4 {
-      margin-bottom: 0.7rem !important;
-      padding-bottom: 0.7rem !important;
-    }
-    main .px-0, main .px-2, main .px-4, main .p-3, main .sm\:p-5 {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-    }
-    main .rounded-lg {
-      border-radius: 0.9rem !important;
-    }
-    main .inline-block {
-      font-size: 0.98rem !important;
-      padding: 0.3em 0.9em !important;
-    }
-    main .h-10 {
-      height: 2.8rem !important;
-    }
-    main .text-xs, main .text-sm {
-      font-size: 1rem !important;
-    }
-    main .font-semibold, main .font-bold {
-      font-weight: 600 !important;
-    }
-    main .shadow-lg, main .shadow-2xl {
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10) !important;
-    }
-    main .gap-2, main .gap-4, main .space-y-4, main .space-y-6 {
-      gap: 0.7rem !important;
-      row-gap: 0.7rem !important;
-    }
-    main .rounded {
-      border-radius: 0.7rem !important;
-    }
-    main .border-4 {
-      border-width: 2px !important;
-    }
-    main .sm\:w-\[550px\] {
-      width: 98vw !important;
-      max-width: 98vw !important;
-    }
-    /* Immagine profilo più grande */
-    main .w-44, main .h-44 {
-      width: 13rem !important;
-      height: 13rem !important;
-    }
-    /* Sfondo bianco alle icone in Key Strengths ed Education SOLO su smartphone */
-    /* Key Strengths icons */
-    .p-2[style*="#000080"] {
-      background: #fff !important;
-      border-radius: 9999px !important;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    /* Education icons (se presenti) */
-    .flex.flex-col.gap-2 .p-2 {
-      background: #fff !important;
-      border-radius: 9999px !important;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-  }
-  /* HEADER più grande SOLO su smartphone */
-  @media (max-width: 639px) {
-    header {
-      padding-top: 5rem !important;
-      padding-bottom: 5rem !important;
-    }
-    header nav {
-      padding-top: 5rem !important;
-      padding-bottom: 5rem !important;
-    }
-    header a.text-2xl {
-      font-size: 4rem !important; /* 64px */
-      line-height: 1.1 !important;
-      letter-spacing: -0.04em !important;
-    }
-    #menu-btn {
-      width: 8rem !important;  /* 128px */
-      height: 8rem !important; /* 128px */
-    }
-    #menu-btn span {
-      width: 4.5rem !important; /* 72px */
-      height: 1.5rem !important; /* 24px */
-    }
-    /* Migliora leggibilità su smartphone */
-    main {
-      font-size: 1.15rem !important;
-      line-height: 1.7 !important;
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-    }
-    main h1, main h2, main h3 {
-      font-size: 2em !important;
-      line-height: 1.2 !important;
-      margin-top: 1.2em !important;
-      margin-bottom: 0.7em !important;
-      text-align: center !important;
-    }
-    main h1 {
-      font-size: 2.7em !important;
-    }
-    main h2 {
-      font-size: 2em !important;
-    }
-    main h3 {
-      font-size: 1.5em !important;
-    }
-    main .bg-white {
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
-      border-radius: 1.2rem !important;
-      padding: 0.7rem !important;
-    }
-    main .text-base, main .text-slate-600, main .text-slate-900, main .text-slate-800 {
-      font-size: 1.08rem !important;
-    }
-    main .rounded-xl {
-      border-radius: 1.2rem !important;
-    }
-    main .flex-col, main .flex {
-      gap: 0.7rem !important;
-    }
-    main .mb-4, main .mb-3, main .pb-6, main .py-4 {
-      margin-bottom: 0.7rem !important;
-      padding-bottom: 0.7rem !important;
-    }
-    main .px-0, main .px-2, main .px-4, main .p-3, main .sm\:p-5 {
-      padding-left: 0.5rem !important;
-      padding-right: 0.5rem !important;
-    }
-    main .rounded-lg {
-      border-radius: 0.9rem !important;
-    }
-    main .inline-block {
-      font-size: 0.98rem !important;
-      padding: 0.3em 0.9em !important;
-    }
-    main .h-10 {
-      height: 2.8rem !important;
-    }
-    main .text-xs, main .text-sm {
-      font-size: 1rem !important;
-    }
-    main .font-semibold, main .font-bold {
-      font-weight: 600 !important;
-    }
-    main .shadow-lg, main .shadow-2xl {
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10) !important;
-    }
-    main .gap-2, main .gap-4, main .space-y-4, main .space-y-6 {
-      gap: 0.7rem !important;
-      row-gap: 0.7rem !important;
-    }
-    main .rounded {
-      border-radius: 0.7rem !important;
-    }
-    main .border-4 {
-      border-width: 2px !important;
-    }
-    main .sm\:w-\[550px\] {
-      width: 98vw !important;
-      max-width: 98vw !important;
-    }
-    /* Immagine profilo più grande */
-    main .w-44, main .h-44 {
-      width: 13rem !important;
-      height: 13rem !important;
-    }
-    /* Sfondo bianco alle icone in Key Strengths ed Education SOLO su smartphone */
-    /* Key Strengths icons */
-    .p-2[style*="#000080"] {
-      background: #fff !important;
-      border-radius: 9999px !important;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    /* Education icons (se presenti) */
-    .flex.flex-col.gap-2 .p-2 {
-      background: #fff !important;
-      border-radius: 9999px !important;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-  }
-  /* Sfondo bianco alle icone in Key Strengths ed Education SOLO su smartphone */
-  @media (max-width: 639px) {
-    /* Key Strengths icons */
-    .p-2[style*="#000080"] {
-      background: #fff !important;
-      border-radius: 9999px !important;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    /* Education icons (se presenti) */
-    .flex.flex-col.gap-2 .p-2 {
-      background: #fff !important;
-      border-radius: 9999px !important;
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-  }
-  </style>
-  </head>
+  /* RIMOSSE LE REGOLE RIPETITIVE PER SMARTPHONE */
+</style>
+</head>
 <body class="bg-slate-50" style="font-family: Inter, 'Noto Sans', sans-serif;" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
-<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-<!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
-<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
-  <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
-<a class="text-black text-2xl font-extrabold hover:opacity-80 transition-opacity sm:text-lg sm:font-bold ml-5" href="index.html">Home</a>
-    <div class="relative ml-auto mr-2 sm:mr-2">
-      <button id="menu-btn"
-        class="flex flex-col justify-center items-center w-16 h-16 z-50 sm:w-10 sm:h-10"
-        aria-label="Open menu">
-        <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
-        <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
-        <span class="block w-10 h-2 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
-      </button>
-    </div>
-      </nav>
-        <div id="menu-links" class="absolute top-0 right-[29px] mt-16 w-[85vw] max-w-sm bg-white/90 backdrop-blur-md shadow-xl rounded-lg z-40 p-2 flex-col space-y-2 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-md">
-        <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="about-me.html">About Me</a>
-        <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="skills.html">Skills</a>
-        <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="projects.html">Projects</a>
-        <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="contacts.html">Contact</a>
-        <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
-        <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
+<div class="min-h-screen flex flex-col">
+  <!-- HEADER -->
+  <header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
+    <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
+      <a class="text-black text-2xl font-extrabold hover:opacity-80 transition-opacity sm:text-lg sm:font-bold ml-5" href="index.html">Home</a>
+      <div class="relative ml-auto mr-2 sm:mr-2">
+        <button id="menu-btn"
+          class="flex flex-col justify-center items-center w-16 h-16 z-50 sm:w-10 sm:h-10"
+          aria-label="Open menu">
+          <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+          <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+          <span class="block w-10 h-2 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
+        </button>
       </div>
-</header>
-<main class="flex-grow">
-  <h1 class="text-[#0d141c] text-3xl font-extrabold leading-tight tracking-tight text-center py-4">About Me</h1>
-  <div class="flex flex-col p-2 @container">
-    <div class="flex w-full flex-col gap-6 items-center">
-      <div class="flex gap-4 flex-col items-center">
-        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-44 h-44 mx-auto mb-4 shadow-lg border-4 border-white sm:w-32 sm:h-32" style="background-image: url('image/foto_cv.jpg');"></div>
-        <div class="flex flex-col items-center justify-center">
-          <p class="text-[#0d141c] text-3xl font-extrabold leading-tight tracking-[-0.015em] text-center sm:text-2xl sm:font-bold">Giorgia Spina</p>
-          <p class="text-[#000080] text-xl font-bold leading-normal text-center sm:text-lg sm:font-medium">Junior Data Engineer</p>
-          <p class="text-slate-500 text-lg font-semibold leading-normal text-center flex items-center sm:text-sm sm:font-normal">
+    </nav>
+    <div id="menu-links" class="absolute top-0 right-[29px] mt-16 w-[85vw] max-w-sm bg-white/90 backdrop-blur-md shadow-xl rounded-lg z-40 p-2 flex-col space-y-2 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-md">
+      <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="about-me.html">About Me</a>
+      <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="skills.html">Skills</a>
+      <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="projects.html">Projects</a>
+      <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="contacts.html">Contact</a>
+      <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
+      <a class="nav-link w-full text-left block hover:bg-gray-100 transition-colors duration-200 rounded-md px-2 py-1" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
+    </div>
+  </header>
+
+  <main class="flex-grow flex flex-col items-center justify-start pt-6 pb-8">
+  <h1 class="text-[#0d141c] text-4xl font-extrabold leading-tight tracking-tight text-center py-4 sm:text-3xl sm:font-bold">About Me</h1>
+  <section class="w-full max-w-3xl bg-white rounded-2xl shadow-lg px-8 py-10 mb-8">
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+        <!-- Profile Info -->
+        <div class="flex-shrink-0 flex flex-col items-center md:items-start w-full md:w-1/3">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-44 h-44 shadow-lg border-4 border-white mb-4" style="background-image: url('image/foto_cv.jpg');"></div>
+          <h2 class="text-[#0d141c] text-2xl font-bold leading-tight mb-1">Giorgia Spina</h2>
+          <p class="text-[#000080] text-lg font-semibold mb-1">Junior Data Engineer</p>
+          <p class="text-slate-500 text-base font-medium flex items-center mb-4">
             <span class="material-icons text-base mr-1">location_on</span>
             Milan, MI
           </p>
         </div>
-      </div>
-    </div>
-    <div class="px-2 sm:px-6 space-y-6 pb-8">
-      <div>
-        <h2 class="text-[#0d141c] text-2xl font-bold leading-tight tracking-[-0.015em] pb-2 sm:text-xl sm:font-semibold">Background</h2>
-        <p class="text-slate-700 text-lg font-normal leading-relaxed sm:text-base">
-          I come from a background in the culinary industry, where I worked for several years and had the opportunity to manage a professional kitchen. This experience has equipped me with strong soft skills such as problem-solving under pressure, team coordination, time management, and attention to detail — all essential in data engineering as well.
-        </p>
-        <p class="text-slate-700 text-lg font-normal leading-relaxed sm:text-base">
-          Driven by a passion for technology and structured thinking, I decided to shift my career path and completed a specialized training course with Generation Italy as a Junior Data Engineer. This experience allowed me to acquire foundational skills in data pipelines, SQL, Python, NoSQL databases, and data visualization (Power BI), laying the groundwork for my future in tech.
-        </p>
-      </div>
-      <div>
-        <h2 class="text-[#0d141c] text-2xl font-bold leading-tight tracking-[-0.015em] pb-2 sm:text-xl sm:font-semibold">Career Aspirations</h2>
-        <p class="text-slate-700 text-lg font-normal leading-relaxed sm:text-base">
-          I aspire to grow as a Data Engineer by building solid experience in designing and managing data pipelines, starting from real-world projects and cloud-based tools. My goal is to deepen my skills in handling large-scale datasets and gradually move toward integrating data engineering with areas like machine learning and advanced analytics. I'm especially motivated to work in dynamic environments where I can learn from experienced professionals and contribute to impactful data solutions.
-        </p>
-      </div>
-      <div>
-        <h2 class="text-[#0d141c] text-2xl font-bold leading-tight tracking-[-0.015em] pb-3 sm:text-xl sm:font-semibold">Key Strengths</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
-            <div class="flex items-center gap-3">
-              <div class="p-2" style="color:#000080;">
-                <span class="material-icons text-2xl">data_object</span>
-              </div>
-              <h3 class="text-slate-800 text-lg font-semibold leading-tight sm:text-base">Data Pipeline Design</h3>
-            </div>
-            <p class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">Ability to design and optimize data pipelines for efficient data flow.</p>
-          </div>
-          <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
-            <div class="flex items-center gap-3">
-              <div class="p-2" style="color:#000080;">
-                <span class="material-icons text-2xl">code</span>
-              </div>
-              <h3 class="text-slate-800 text-lg font-semibold leading-tight sm:text-base">Python</h3>
-            </div>
-            <p class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">Proficient in Python for data manipulation, pipeline automation, and working with APIs.</p>
-          </div>
-          <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
-            <div class="flex items-center gap-3">
-              <div class="p-2" style="color:#000080;">
-                <span class="material-icons text-2xl">analytics</span>
-              </div>
-              <h3 class="text-slate-800 text-lg font-semibold leading-tight sm:text-base">Data Analysis</h3>
-            </div>
-            <p class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">Skilled in analyzing and interpreting complex datasets to derive insights.</p>
-          </div>
-          <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
-            <div class="flex items-center gap-3">
-              <div class="p-2" style="color:#000080;">
-                <span class="material-icons text-2xl">storage</span>
-              </div>
-              <h3 class="text-slate-800 text-lg font-semibold leading-tight sm:text-base">SQL</h3>
-            </div>
-            <p class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">Skilled in writing efficient SQL queries for data extraction, transformation, and analysis.</p>
-          </div>
-          <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
-            <div class="flex items-center gap-3">
-              <div class="p-2" style="color:#000080;">
-                <span class="material-icons text-2xl">transform</span>
-              </div>
-              <h3 class="text-slate-800 text-lg font-semibold leading-tight sm:text-base">ETL Processes</h3>
-            </div>
-            <p class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">Experienced in designing and implementing ETL pipelines to process data from a single source.</p>
-          </div>
+        <!-- Professional Summary -->
+        <div class="flex-1 flex flex-col justify-center md:justify-start">
+          <p class="text-slate-700 text-base leading-relaxed">
+            Passionate about technology, I trained as a Junior Data Engineer with Generation Italy, acquiring key skills in data pipelines, SQL, Python, NoSQL, and Power BI. I aim to advance my expertise by working on real-world projects and cloud tools, focusing on large-scale data handling and integrating data engineering with machine learning and analytics. I’m motivated to grow in dynamic teams, learning from experts and delivering impactful data solutions.
+          </p>
         </div>
       </div>
-      <div>
-        <h2 class="text-[#0d141c] text-2xl font-bold leading-tight tracking-[-0.015em] pb-2 sm:text-xl sm:font-semibold">Education</h2>
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-2 rounded-xl border border-slate-200 p-4 shadow-sm bg-white sm:bg-transparent">
-            <div class="text-[#000080] text-lg font-semibold leading-tight sm:text-sm">Generation Italy</div>
-            <div class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">Junior Data Engineer</div>
-            <div class="text-slate-500 text-sm font-normal leading-relaxed sm:text-xs">Completed: May 2025</div>
-          </div>
-          <div class="flex flex-col gap-2 rounded-xl border border-slate-200 p-4 shadow-sm bg-white sm:bg-transparent">
-            <div class="text-[#000080] text-lg font-semibold leading-tight sm:text-sm">Diploma in Enogastronomy</div>
-            <div class="text-slate-700 text-base font-normal leading-relaxed sm:text-sm">High School</div>
-            <div class="text-slate-500 text-sm font-normal leading-relaxed sm:text-xs">Completed: July 2017</div>
-          </div>
-        </div>
-      </div>
+      <!-- Key Skills Section rimossa -->
+    </section>
+  </main>
+
+  <footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
+    <div class="flex flex-col items-center">
+      <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
     </div>
-  </div>
-</main>
-<footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
-  <div class="flex flex-col items-center">
-    <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
-  </div>
-</footer>
+  </footer>
 </div>
+
 <style>
   html, body {
     height: 100%;
@@ -466,6 +149,7 @@
     overflow-x: hidden;
   }
 </style>
+
 <!-- Add script for hamburger menu -->
 <script>
   const menuBtn = document.getElementById('menu-btn');
@@ -485,12 +169,13 @@
     }
   });
 
-  // Chiudi il menu quando si clicca su un link del menu
+  // Close menu when clicking a menu link
   menuLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 
-  // Chiudi il menu ogni volta che la pagina viene caricata/mostrata (anche da navigazione browser)
+  // Close menu when page is shown (including back/forward navigation)
   window.addEventListener('pageshow', closeMenu);
 </script>
-</body></html>
+</body>
+</html>
