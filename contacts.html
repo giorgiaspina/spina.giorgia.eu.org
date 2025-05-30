@@ -74,6 +74,112 @@
       background-color: #f1f5f9; /* fallback */
     }
   }
+
+  /* HEADER più grande SOLO su smartphone */
+  @media (max-width: 639px) {
+    header {
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+    header nav {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+    header a.text-2xl {
+      font-size: 2.25rem !important; /* 36px */
+    }
+    #menu-btn {
+      width: 4.5rem !important;  /* 72px */
+      height: 4.5rem !important; /* 72px */
+    }
+    #menu-btn span {
+      width: 2.75rem !important; /* 44px */
+      height: 0.75rem !important; /* 12px */
+    }
+    /* Migliora leggibilità su smartphone */
+    main {
+      font-size: 1.15rem !important;
+      line-height: 1.7 !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+    }
+    main h1, main h2, main h3 {
+      font-size: 1.5em !important;
+      line-height: 1.2 !important;
+      margin-top: 1.2em !important;
+      margin-bottom: 0.7em !important;
+      text-align: center !important;
+    }
+    main h1 {
+      font-size: 2.1em !important;
+    }
+    main h2 {
+      font-size: 1.4em !important;
+    }
+    main h3 {
+      font-size: 1.15em !important;
+    }
+    main .bg-white {
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+      border-radius: 1.2rem !important;
+      padding: 0.7rem !important;
+    }
+    main .text-base, main .text-slate-600, main .text-slate-900, main .text-slate-800 {
+      font-size: 1.08rem !important;
+    }
+    main .rounded-xl {
+      border-radius: 1.2rem !important;
+    }
+    main .flex-col, main .flex {
+      gap: 0.7rem !important;
+    }
+    main .mb-4, main .mb-3, main .pb-6, main .py-4 {
+      margin-bottom: 0.7rem !important;
+      padding-bottom: 0.7rem !important;
+    }
+    main .px-0, main .px-2, main .px-4, main .p-3, main .sm\:p-5 {
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+    }
+    main .rounded-lg {
+      border-radius: 0.9rem !important;
+    }
+    main .inline-block {
+      font-size: 0.98rem !important;
+      padding: 0.3em 0.9em !important;
+    }
+    main .h-10 {
+      height: 2.8rem !important;
+    }
+    main .text-xs, main .text-sm {
+      font-size: 1rem !important;
+    }
+    main .font-semibold, main .font-bold {
+      font-weight: 600 !important;
+    }
+    main .shadow-lg, main .shadow-2xl {
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10) !important;
+    }
+    main .gap-2, main .gap-4, main .space-y-4, main .space-y-6 {
+      gap: 0.7rem !important;
+      row-gap: 0.7rem !important;
+    }
+    main .rounded {
+      border-radius: 0.7rem !important;
+    }
+    main .border-4 {
+      border-width: 2px !important;
+    }
+    main .sm\:w-\[550px\] {
+      width: 98vw !important;
+      max-width: 98vw !important;
+    }
+    /* Immagine profilo più grande */
+    main .h-32, main .w-32 {
+      width: 10rem !important;
+      height: 10rem !important;
+    }
+  }
 </style>
   </head>
 <body class="bg-slate-50" style="font-family: Inter, 'Noto Sans', sans-serif;" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
