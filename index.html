@@ -74,26 +74,29 @@
     }
   </style>
 </head>
-<body class="bg-slate-100" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<body class="bg-slate-100" style='font-family: Inter, "Noto Sans", sans-serif;' onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
   <div class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden">
+    <!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
     <header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
-      <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity" href="index.html">Home</a>
+      <nav class="container mx-auto px-4 py-3 flex justify-between items-center sm:py-5">
+        <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity sm:text-2xl sm:font-bold" href="index.html">Home</a>
         <div class="relative ml-auto mr-2 sm:mr-4">
-          <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 z-50" aria-label="Open menu">
-            <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
-            <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
-            <span class="block w-6 h-0.5 bg-black rounded transition-all"></span>
+          <button id="menu-btn"
+            class="flex flex-col justify-center items-center w-12 h-12 z-50 sm:w-10 sm:h-10"
+            aria-label="Open menu">
+            <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+            <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+            <span class="block w-7 h-1 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
           </button>
         </div>
       </nav>
-      <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[90%] sm:w-[60%] max-w-lg bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3">
+      <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[98%] max-w-xs bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-lg">
         <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
         <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
         <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
         <a class="nav-link w-full text-left block" href="contacts.html">Contact</a>
         <a class="nav-link w-full text-left block" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
-        <a class="nav-link w-full text-left block" href="image/CV.pdf" target="_blank">Curriculum</a>
+        <a class="nav-link w-full text-left block" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
       </div>
     </header>
 
@@ -128,22 +131,36 @@
 
   <!-- Hamburger script con animazione -->
   <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const menuLinks = document.getElementById('menu-links');
+  const menuBtn = document.getElementById('menu-btn');
+  const menuLinks = document.getElementById('menu-links');
 
-    let isOpen = false;
+  function closeMenu() {
+    menuLinks.classList.remove('open');
+    menuLinks.classList.add('hidden');
+    isOpen = false;
+  }
 
-    menuBtn.addEventListener('click', () => {
-      isOpen = !isOpen;
-      menuLinks.classList.toggle('open', isOpen);
-    });
+  let isOpen = false;
 
-    document.addEventListener('click', (e) => {
-      if (!menuBtn.contains(e.target) && !menuLinks.contains(e.target)) {
-        isOpen = false;
-        menuLinks.classList.remove('open');
-      }
-    });
+  menuBtn.addEventListener('click', () => {
+    isOpen = !isOpen;
+    menuLinks.classList.toggle('open', isOpen);
+    menuLinks.classList.toggle('hidden', !isOpen);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !menuLinks.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Chiudi il menu quando si clicca su un link del menu
+  menuLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Chiudi il menu ogni volta che la pagina viene caricata/mostrata (anche da navigazione browser)
+  window.addEventListener('pageshow', closeMenu);
   </script>
 </body>
 </html>

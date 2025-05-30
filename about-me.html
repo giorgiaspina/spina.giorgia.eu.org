@@ -42,32 +42,34 @@
 }
   </style>
   </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
 <!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
 <header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
-  <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+  <nav class="container mx-auto px-4 py-3 flex justify-between items-center sm:py-5">
     <!-- Logo / Home -->
-    <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity" href="index.html">Home</a>
+    <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity sm:text-2xl sm:font-bold" href="index.html">Home</a>
 
     <!-- Bottone hamburger (sempre visibile) -->
-    <div class="relative">
-      <button id="menu-btn" class="flex flex-col justify-center items-center w-10 h-10 z-50" aria-label="Open menu">
-        <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
-        <span class="block w-6 h-0.5 bg-black mb-1 rounded transition-all"></span>
-        <span class="block w-6 h-0.5 bg-black rounded transition-all"></span>
+    <div class="relative ml-auto mr-2 sm:mr-4">
+      <button id="menu-btn"
+        class="flex flex-col justify-center items-center w-12 h-12 z-50 sm:w-10 sm:h-10"
+        aria-label="Open menu">
+        <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+        <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+        <span class="block w-7 h-1 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
       </button>
     </div>
   </nav>
 
   <!-- MENU A TENDINA MODERNO -->
-  <div id="menu-links" class="hidden absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[90%] sm:w-[60%] max-w-lg bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300">
+  <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[98%] max-w-xs bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-lg">
     <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
     <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
     <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
     <a class="nav-link w-full text-left block" href="contacts.html">Contact</a>
     <a class="nav-link w-full text-left block" href="image/Certificazione_Generation.pdf" target="_blank">Certification</a>
-    <a class="nav-link w-full text-left block" href="image/CV.pdf" target="_blank">Curriculum</a>
+    <a class="nav-link w-full text-left block" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
   </div>
 </header>
 
@@ -108,66 +110,66 @@
 <div>
 <h2 class="text-[#0d141c] text-xl font-semibold leading-tight tracking-[-0.015em] pb-3">Key Strengths</h2>
 <div class="grid grid-cols-1 @sm:grid-cols-2 gap-4">
-<div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-<div class="flex items-center gap-3">
-<div class="p-2" style="color:#000080;">
-<span class="material-icons text-2xl">data_object</span>
-</div>
-<h3 class="text-slate-800 text-base font-semibold leading-tight">Data Pipeline Design</h3>
-</div>
-<p class="text-slate-700 text-sm font-normal leading-relaxed">Ability to design and optimize data pipelines for efficient data flow.</p>
-</div>
-<div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-<div class="flex items-center gap-3">
-<div class="p-2" style="color:#000080;">
-<span class="material-icons text-2xl">code</span>
-</div>
-<h3 class="text-slate-800 text-base font-semibold leading-tight">Python</h3>
-</div>
-<p class="text-slate-700 text-sm font-normal leading-relaxed">Proficient in Python for data manipulation, pipeline automation, and working with APIs.</p>
-</div>
-<div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-<div class="flex items-center gap-3">
-<div class="p-2" style="color:#000080;">
-<span class="material-icons text-2xl">analytics</span>
-</div>
-<h3 class="text-slate-800 text-base font-semibold leading-tight">Data Analysis</h3>
-</div>
-<p class="text-slate-700 text-sm font-normal leading-relaxed">Skilled in analyzing and interpreting complex datasets to derive insights.</p>
-</div>
-<div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-<div class="flex items-center gap-3">
-<div class="p-2" style="color:#000080;">
-<span class="material-icons text-2xl">storage</span>
-</div>
-<h3 class="text-slate-800 text-base font-semibold leading-tight">SQL</h3>
-</div>
-<p class="text-slate-700 text-sm font-normal leading-relaxed">Skilled in writing efficient SQL queries for data extraction, transformation, and analysis.</p>
-</div>
-<div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow">
-<div class="flex items-center gap-3">
-<div class="p-2" style="color:#000080;">
-<span class="material-icons text-2xl">transform</span>
-</div>
-<h3 class="text-slate-800 text-base font-semibold leading-tight">ETL Processes</h3>
-</div>
-<p class="text-slate-700 text-sm font-normal leading-relaxed">Experienced in designing and implementing ETL pipelines to process data from a single source.</p>
-</div>
+  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
+    <div class="flex items-center gap-3">
+      <div class="p-2" style="color:#000080;">
+        <span class="material-icons text-2xl">data_object</span>
+      </div>
+      <h3 class="text-slate-800 text-base font-semibold leading-tight">Data Pipeline Design</h3>
+    </div>
+    <p class="text-slate-700 text-sm font-normal leading-relaxed">Ability to design and optimize data pipelines for efficient data flow.</p>
+  </div>
+  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
+    <div class="flex items-center gap-3">
+      <div class="p-2" style="color:#000080;">
+        <span class="material-icons text-2xl">code</span>
+      </div>
+      <h3 class="text-slate-800 text-base font-semibold leading-tight">Python</h3>
+    </div>
+    <p class="text-slate-700 text-sm font-normal leading-relaxed">Proficient in Python for data manipulation, pipeline automation, and working with APIs.</p>
+  </div>
+  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
+    <div class="flex items-center gap-3">
+      <div class="p-2" style="color:#000080;">
+        <span class="material-icons text-2xl">analytics</span>
+      </div>
+      <h3 class="text-slate-800 text-base font-semibold leading-tight">Data Analysis</h3>
+    </div>
+    <p class="text-slate-700 text-sm font-normal leading-relaxed">Skilled in analyzing and interpreting complex datasets to derive insights.</p>
+  </div>
+  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
+    <div class="flex items-center gap-3">
+      <div class="p-2" style="color:#000080;">
+        <span class="material-icons text-2xl">storage</span>
+      </div>
+      <h3 class="text-slate-800 text-base font-semibold leading-tight">SQL</h3>
+    </div>
+    <p class="text-slate-700 text-sm font-normal leading-relaxed">Skilled in writing efficient SQL queries for data extraction, transformation, and analysis.</p>
+  </div>
+  <div class="flex flex-col gap-3 rounded-xl border border-slate-200 p-4 shadow-sm hover:shadow-md transition-shadow bg-white sm:bg-transparent">
+    <div class="flex items-center gap-3">
+      <div class="p-2" style="color:#000080;">
+        <span class="material-icons text-2xl">transform</span>
+      </div>
+      <h3 class="text-slate-800 text-base font-semibold leading-tight">ETL Processes</h3>
+    </div>
+    <p class="text-slate-700 text-sm font-normal leading-relaxed">Experienced in designing and implementing ETL pipelines to process data from a single source.</p>
+  </div>
 </div>
 </div>
 <div>
 <h2 class="text-[#0d141c] text-xl font-semibold leading-tight tracking-[-0.015em] pb-2">Education</h2>
 <div class="flex flex-col gap-4">
-<div class="flex flex-col gap-2 rounded-xl border border-slate-200 p-4 shadow-sm">
-<div class="text-[#000080] text-sm font-semibold leading-tight">Generation Italy</div>
-<div class="text-slate-700 text-sm font-normal leading-relaxed">Junior Data Engineer</div>
-<div class="text-slate-500 text-xs font-normal leading-relaxed">Completed: May 2025</div>
-</div>
-<div class="flex flex-col gap-2 rounded-xl border border-slate-200 p-4 shadow-sm">
-<div class="text-[#000080] text-sm font-semibold leading-tight">Diploma in Enogastronomy</div>
-<div class="text-slate-700 text-sm font-normal leading-relaxed">High School</div>
-<div class="text-slate-500 text-xs font-normal leading-relaxed">Completed: July 2017</div>
-</div>
+  <div class="flex flex-col gap-2 rounded-xl border border-slate-200 p-4 shadow-sm bg-white sm:bg-transparent">
+    <div class="text-[#000080] text-sm font-semibold leading-tight">Generation Italy</div>
+    <div class="text-slate-700 text-sm font-normal leading-relaxed">Junior Data Engineer</div>
+    <div class="text-slate-500 text-xs font-normal leading-relaxed">Completed: May 2025</div>
+  </div>
+  <div class="flex flex-col gap-2 rounded-xl border border-slate-200 p-4 shadow-sm bg-white sm:bg-transparent">
+    <div class="text-[#000080] text-sm font-semibold leading-tight">Diploma in Enogastronomy</div>
+    <div class="text-slate-700 text-sm font-normal leading-relaxed">High School</div>
+    <div class="text-slate-500 text-xs font-normal leading-relaxed">Completed: July 2017</div>
+  </div>
 </div>
 </div>
 </main>
@@ -182,15 +184,26 @@
   const menuBtn = document.getElementById('menu-btn');
   const menuLinks = document.getElementById('menu-links');
 
+  function closeMenu() {
+    menuLinks.classList.add('hidden');
+  }
+
   menuBtn.addEventListener('click', () => {
     menuLinks.classList.toggle('hidden');
   });
 
-  // Chiude il menu se si clicca fuori (opzionale)
   document.addEventListener('click', (e) => {
     if (!menuBtn.contains(e.target) && !menuLinks.contains(e.target)) {
-      menuLinks.classList.add('hidden');
+      closeMenu();
     }
   });
+
+  // Chiudi il menu quando si clicca su un link del menu
+  menuLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Chiudi il menu ogni volta che la pagina viene caricata/mostrata (anche da navigazione browser)
+  window.addEventListener('pageshow', closeMenu);
 </script>
 </body></html>
