@@ -69,12 +69,17 @@
     body {
       min-height: 100vh;
       overflow-y: auto;
+      background-color: #e8f5e9; /* Light green */
     }
-  </style>
-  <style>
-  body {
-    background-color: #e8f5e9; /* Light green */
-  }
+    /* Sfondo come index SOLO per PC */
+    @media (min-width: 640px) {
+      body {
+        background-image: url('image/foto4.avif');
+        background-size: cover;
+        background-position: center;
+        background-color: #f1f5f9; /* fallback */
+      }
+    }
   </style>
   <style>
   /* Remove background color from footer */
@@ -109,23 +114,22 @@
 }
   </style>
   </head>
-<body class="bg-slate-50" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
-<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
-  <!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
-<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
-  <nav class="container mx-auto px-4 py-3 flex justify-between items-center sm:py-5">
-    <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity sm:text-2xl sm:font-bold" href="index.html">Home</a>
-    <div class="relative ml-auto mr-2 sm:mr-4">
+<body class="bg-slate-50" style="font-family: Inter, 'Noto Sans', sans-serif;" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
+  <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
+    <a class="text-black text-2xl font-extrabold hover:opacity-80 transition-opacity sm:text-lg sm:font-bold" href="index.html">Home</a>
+    <div class="relative ml-auto mr-2 sm:mr-2">
       <button id="menu-btn"
-        class="flex flex-col justify-center items-center w-12 h-12 z-50 sm:w-10 sm:h-10"
+        class="flex flex-col justify-center items-center w-16 h-16 z-50 sm:w-10 sm:h-10"
         aria-label="Open menu">
-        <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
-        <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
-        <span class="block w-7 h-1 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
+        <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+        <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+        <span class="block w-10 h-2 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
       </button>
     </div>
   </nav>
-  <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[98%] max-w-xs bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-lg">
+  <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[98vw] max-w-xs bg-white/95 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-4 flex-col space-y-3 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-lg">
     <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
     <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
     <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
@@ -134,13 +138,9 @@
     <a class="nav-link w-full text-left block" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
   </div>
 </header>
-
-<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10 shadow-sm">
-  <h1 class="text-slate-900 text-xl font-semibold leading-tight flex-1 text-center pr-10">Technical Skills</h1>
-  </div>
-
 <main class="flex-grow">
-<section>
+  <h1 class="text-[#0d141c] text-3xl font-extrabold leading-tight tracking-tight text-center py-4">Skills</h1>
+  <section>
 <h2 class="section-title programming-languages-title" style="color:#000080;">Programming Languages</h2>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 pt-2 programming-languages">
 <div class="skill-card">
@@ -234,12 +234,25 @@
 </div>
 </section>
 </main>
-<footer class="text-center py-4" style="">
-    <div class="flex flex-col items-center">
-      <p>Giorgia Spina</p>
-    </div>
-  </footer>
+<footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
+  <div class="flex flex-col items-center">
+    <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
+  </div>
+</footer>
 </div>
+<style>
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    min-height: 100vh;
+  }
+  main {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+</style>
 
 <!-- Add script for hamburger menu -->
 <script>

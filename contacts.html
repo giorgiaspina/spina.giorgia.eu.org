@@ -7,45 +7,43 @@
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
-    @layer base {
-      :root {
-        --color-primary: #0c7ff2;
-        --color-secondary: #6b7280;
-        --color-accent: #f3f4f6;
-        --color-text-primary: #1f2937;
-        --color-text-secondary: #4b5563;
-        --color-background: #ffffff;
-      }
-      body {
-        font-family: 'Inter', "Noto Sans", sans-serif;
-        background-color: var(--color-background);
-      }
+  @layer base {
+    :root {
+      --color-primary: #0c7ff2;
+      --color-secondary: #6b7280;
+      --color-accent: #f3f4f6;
+      --color-text-primary: #1f2937;
+      --color-text-secondary: #4b5563;
+      --color-background: #ffffff;
     }
-    .icon-primary {
-      color: var(--color-primary);
-    }
-    .bg-primary-light {
-      background-color: var(--color-accent);
-    }
-    .text-primary {
-      color: var(--color-primary);
-    }
-    .border-primary-light {
-      border-color: var(--color-accent);
-    }
-  </style>
-<style>
     body {
-      min-height: 100vh;
-      overflow-y: auto;
-      background-image: url('image/foto4.avif');
-      background-size: cover;
-      background-position: center;
+      font-family: 'Inter', "Noto Sans", sans-serif;
+      background-color: var(--color-background);
     }
-    footer {
-      background-color: #a5d6a7; /* Professional green */
-    }
-    .btn-primary {
+  }
+  .icon-primary {
+    color: var(--color-primary);
+  }
+  .bg-primary-light {
+    background-color: var(--color-accent);
+  }
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .border-primary-light {
+    border-color: var(--color-accent);
+  }
+</style>
+<style>
+  body {
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #e8f5e9; /* Light green */
+  }
+  footer {
+    background-color: #a5d6a7; /* Professional green */
+  }
+  .btn-primary {
     background-color: #388e3c; /* Professional dark green */
     color: white;
     font-weight: 600;
@@ -57,35 +55,44 @@
     background-color: #2e7d32; /* Slightly darker green */
   }
   .nav-link {
-  color: #475569;
-  font-weight: 500;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-.nav-link:hover {
-  background-color: #E2E8F0;
-  color: #1E293B;
-}
-  </style>
+    color: #475569;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  .nav-link:hover {
+    background-color: #E2E8F0;
+    color: #1E293B;
+  }
+  /* Sfondo come index SOLO per PC */
+  @media (min-width: 640px) {
+    body {
+      background-image: url('image/foto4.avif');
+      background-size: cover;
+      background-position: center;
+      background-color: #f1f5f9; /* fallback */
+    }
+  }
+</style>
   </head>
-<body class="bg-slate-50" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
-<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<body class="bg-slate-50" style="font-family: Inter, 'Noto Sans', sans-serif;" onpageshow="document.getElementById('menu-links')?.classList.add('hidden');">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
 <!-- HEADER CON HAMBURGER SEMPRE VISIBILE -->
-<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: transparent;">
-  <nav class="container mx-auto px-4 py-3 flex justify-between items-center sm:py-5">
-    <a class="text-black text-lg font-bold hover:opacity-80 transition-opacity sm:text-2xl sm:font-bold" href="index.html">Home</a>
-    <div class="relative ml-auto mr-2 sm:mr-4">
+<header class="shadow-md sticky top-0 z-[100]" style="color: black; background-color: #fff;">
+  <nav class="container mx-auto px-2 py-5 flex justify-between items-center sm:py-3">
+    <a class="text-black text-2xl font-extrabold hover:opacity-80 transition-opacity sm:text-lg sm:font-bold" href="index.html">Home</a>
+    <div class="relative ml-auto mr-2 sm:mr-2">
       <button id="menu-btn"
-        class="flex flex-col justify-center items-center w-12 h-12 z-50 sm:w-10 sm:h-10"
+        class="flex flex-col justify-center items-center w-16 h-16 z-50 sm:w-10 sm:h-10"
         aria-label="Open menu">
-        <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
-        <span class="block w-7 h-1 bg-black mb-1.5 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
-        <span class="block w-7 h-1 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
+        <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+        <span class="block w-10 h-2 bg-black mb-2 rounded transition-all sm:w-6 sm:h-0.5 sm:mb-1"></span>
+        <span class="block w-10 h-2 bg-black rounded transition-all sm:w-6 sm:h-0.5"></span>
       </button>
     </div>
   </nav>
-  <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[98%] max-w-xs bg-white/90 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-6 flex-col space-y-3 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-lg">
+  <div id="menu-links" class="absolute top-0 left-1/2 -translate-x-1/2 mt-16 w-[98vw] max-w-xs bg-white/95 backdrop-blur-lg shadow-2xl rounded-xl z-40 p-4 flex-col space-y-3 transition-all duration-300 sm:mt-20 sm:w-[60%] sm:max-w-lg">
     <a class="nav-link w-full text-left block" href="about-me.html">About Me</a>
     <a class="nav-link w-full text-left block" href="skills.html">Skills</a>
     <a class="nav-link w-full text-left block" href="projects.html">Projects</a>
@@ -94,73 +101,79 @@
     <a class="nav-link w-full text-left block" href="image/CV_Giorgia_Spina_JuniorDataEngineer.pdf" target="_blank">Curriculum</a>
   </div>
 </header>
-<div class="flex items-center bg-white p-4 pb-2 justify-between sticky top-0 z-10 shadow-sm">
-<h2 class="text-[#0d141c] text-xl font-semibold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Contact</h2>
-</div>
 <main class="flex-grow">
-<div class="p-6 @container">
-<div class="flex w-full flex-col gap-6 items-center">
-<div class="flex gap-4 flex-col items-center">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 shadow-lg" style="background-image: url('image/foto_cv.jpg');"></div>
-<div class="flex flex-col items-center justify-center gap-1">
-<p class="text-color-text-primary text-2xl font-bold leading-tight tracking-tight text-center">Giorgia Spina</p>
-<p class="text-primary text-lg font-medium leading-normal text-center">Junior Data Engineer</p>
-<p class="text-color-text-secondary text-base font-normal leading-relaxed text-center max-w-md mt-2">
-  Having completed a Junior Data Engineer course, I am passionate about the data world and eager to explore its possibilities. My curiosity drives me to analyze and interpret data, uncovering valuable insights to solve real-world challenges and support impactful decisions.
-</p>
-</div>
-</div>
-</div>
-</div>
-<h3 class="text-color-text-primary text-xl font-semibold leading-tight px-6 pb-3 pt-6">Contact Links</h3>
-<div class="space-y-1 px-4 pb-6">
-<a class="flex items-center gap-4 hover:bg-slate-100 p-4 rounded-lg min-h-16 justify-between group" href="https://www.linkedin.com/in/giorgia-spina">
-<div class="flex items-center gap-4">
-<div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-12">
-<svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
-<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
-</svg>
-</div>
-<p class="text-color-text-primary text-lg font-medium leading-normal flex-1 truncate">LinkedIn</p>
-</div>
-<div class="shrink-0">
-<span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
-</div>
-</a>
-<a class="flex items-center gap-4 hover:bg-slate-100 p-4 rounded-lg min-h-16 justify-between group" href="https://github.com/giorgiaspina">
-<div class="flex items-center gap-4">
-<div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-12">
-<svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
-<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
-</svg>
-</div>
-<p class="text-color-text-primary text-lg font-medium leading-normal flex-1 truncate">GitHub</p>
-</div>
-<div class="shrink-0">
-<span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
-</div>
-</a>
-<a class="flex items-center gap-4 hover:bg-slate-100 p-4 rounded-lg min-h-16 justify-between group" href="mailto:spinagiorgia11@gmail.com">
-<div class="flex items-center gap-4">
-<div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-12">
-<svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
-<path d="M228.44,89.34l-96-64a8,8,0,0,0-8.88,0l-96,64A8,8,0,0,0,24,96V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V96A8,8,0,0,0,228.44,89.34ZM96.72,152,40,192V111.53Zm16.37,8h29.82l56.63,40H56.46Zm46.19-8L216,111.53V192ZM128,41.61l81.91,54.61-67,47.78H113.11l-67-47.78Z"></path>
-</svg>
-</div>
-<p class="text-color-text-primary text-lg font-medium leading-normal flex-1 truncate">Email</p>
-</div>
-<div class="shrink-0">
-<span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
-</div>
-</a>
-</div>
-</main>
-<footer class="text-center py-4" style="background-color: transparent;">
-    <div class="flex flex-col items-center">
-      <p>Giorgia Spina</p>
+  <h1 class="text-[#0d141c] text-3xl font-extrabold leading-tight tracking-tight text-center py-4">Contact</h1>
+  <div class="p-2 @container">
+    <div class="flex w-full flex-col gap-4 items-center">
+      <div class="flex gap-2 flex-col items-center">
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 shadow-lg" style="background-image: url('image/foto_cv.jpg');"></div>
+        <div class="flex flex-col items-center justify-center gap-1">
+          <p class="text-color-text-primary text-2xl font-extrabold leading-tight tracking-tight text-center">Giorgia Spina</p>
+          <p class="text-primary text-lg font-bold leading-normal text-center">Junior Data Engineer</p>
+          <p class="text-color-text-secondary text-base font-normal leading-relaxed text-center max-w-md mt-2">
+            Having completed a Junior Data Engineer course, I am passionate about the data world and eager to explore its possibilities. My curiosity drives me to analyze and interpret data, uncovering valuable insights to solve real-world challenges and support impactful decisions.
+          </p>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
+  <h3 class="text-color-text-primary text-lg font-semibold leading-tight px-4 pb-3 pt-6">Contact Links</h3>
+  <div class="space-y-2 px-2 pb-6">
+    <a class="flex items-center gap-3 hover:bg-slate-100 p-3 rounded-lg min-h-14 justify-between group" href="https://www.linkedin.com/in/giorgia-spina">
+      <div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-10">
+        <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+      </svg>
+      </div>
+      <p class="text-color-text-primary text-base font-medium leading-normal flex-1 truncate">LinkedIn</p>
+      <div class="shrink-0">
+        <span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
+      </div>
+    </a>
+    <a class="flex items-center gap-3 hover:bg-slate-100 p-3 rounded-lg min-h-14 justify-between group" href="https://github.com/giorgiaspina">
+      <div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-10">
+        <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+      </svg>
+      </div>
+      <p class="text-color-text-primary text-base font-medium leading-normal flex-1 truncate">GitHub</p>
+      <div class="shrink-0">
+        <span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
+      </div>
+    </a>
+    <a class="flex items-center gap-3 hover:bg-slate-100 p-3 rounded-lg min-h-14 justify-between group" href="mailto:spinagiorgia11@gmail.com">
+      <div class="text-color-primary flex items-center justify-center rounded-xl bg-primary-light shrink-0 size-10">
+        <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M228.44,89.34l-96-64a8,8,0,0,0-8.88,0l-96,64A8,8,0,0,0,24,96V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V96A8,8,0,0,0,228.44,89.34ZM96.72,152,40,192V111.53Zm16.37,8h29.82l56.63,40H56.46Zm46.19-8L216,111.53V192ZM128,41.61l81.91,54.61-67,47.78H113.11l-67-47.78Z"></path>
+      </svg>
+      </div>
+      <p class="text-color-text-primary text-base font-medium leading-normal flex-1 truncate">Email</p>
+      <div class="shrink-0">
+        <span class="material-icons text-color-secondary group-hover:text-primary transition-colors">chevron_right</span>
+      </div>
+    </a>
+  </div>
+</main>
+<footer class="text-center py-4 sm:py-2 text-sm sm:text-xs" style="background-color: transparent;">
+  <div class="flex flex-col items-center">
+    <p>© 2025 Giorgia Spina. All rights reserved.<br>Built with HTML, CSS, and passion.</p>
+  </div>
+</footer>
 </div>
+<style>
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    min-height: 100vh;
+    /* Ottimizzato per mobile: niente padding/margini inutili */
+  }
+  main {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+</style>
 <!-- Add script for hamburger menu -->
 <script>
   const menuBtn = document.getElementById('menu-btn');
